@@ -1,0 +1,29 @@
+CREATE SCHEMA `restaurant` ;
+CREATE TABLE `restaurant`.`menu_item` (
+  `menu_item_id` INT NOT NULL AUTO_INCREMENT,
+  `menu_item_name` VARCHAR(45) NOT NULL,
+  `menu_item_cost` DECIMAL(6,2) NOT NULL,
+  PRIMARY KEY (`menu_item_id`),
+  UNIQUE INDEX `menu_item_name_UNIQUE` (`menu_item_name` ASC));
+
+Insert into menu_item (menu_item_name, menu_item_cost)
+
+	values ('Hotdogs', 2.00);
+
+Insert into menu_item (menu_item_name, menu_item_cost)
+
+	values ('Juice', 3.00);
+
+Insert into menu_item (menu_item_name, menu_item_cost)
+
+	values ('Bacon Mound', 10.00);
+
+CREATE TABLE `restaurant`.`customer` (
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `city` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `zip` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `customer_id` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`customer_id`));
